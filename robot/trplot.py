@@ -1,4 +1,4 @@
-import matplotlib.axes3d as p3
+import mpl_toolkits.mplot3d as p3
 from numpy import * # for outer and arange
 import pylab as p   # for figure
 from robot.Quaternion import *
@@ -22,9 +22,9 @@ def trplot(r, name=''):
 
     fig=p.figure()
     ax=p3.Axes3D(fig)
-    ax.plot3d([0,x[0,0]], [0,x[0,1]], [0,x[0,2]], color='red')
-    ax.plot3d([0,y[0,0]], [0,y[0,1]], [0,y[0,2]], color='green')
-    ax.plot3d([0,z[0,0]], [0,z[0,1]], [0,z[0,2]], color='blue')
+    ax.plot([0,x[0,0]], [0,x[0,1]], [0,x[0,2]], color='red')
+    ax.plot([0,y[0,0]], [0,y[0,1]], [0,y[0,2]], color='green')
+    ax.plot([0,z[0,0]], [0,z[0,1]], [0,z[0,2]], color='blue')
     p.show()
 
 if __name__ == "__main__":
